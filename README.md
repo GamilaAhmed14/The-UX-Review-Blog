@@ -8,7 +8,7 @@ This project focuses on modern frontend development practices including Flexbox 
 
 ## Live Demo
 
-https://the-ux-review-blog.vercel.app/
+[https://the-ux-review-blog.vercel.app/](https://the-ux-review-blog-alpha.vercel.app/)
 
 ## Features
 
