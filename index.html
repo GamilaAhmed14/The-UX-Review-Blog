@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon for title  -->
+     <link rel="icon"  href="./img/ux.png">
+    <!-- css style sheet link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- google fonts link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- title of the website -->
+    <title>The UX Review Blog</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar__container">
+
+    <!-- left navbar : name of the website -->
+    <a href="#" class="navbar__logo">
+      The UX <span class="navbar__text-diff">Review</span>
+    </a>
+    
+    <input type="checkbox" name="menu-toggle"  id="menu-toggle" class="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger-menu">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11066)"> <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11066"> <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)"></rect> </clipPath> </defs> </g></svg>
+  </label>
+    <!-- middle navbar  : list of pages -->
+<nav class="navbar__nav">
+      <ul class="navbar__nav-list">
+        <li class="navbar__nav-item">
+          <a href="#home" class="navbar__nav-link">HOME</a>
+          <img class="navbar__nav-icon" src="./img/download (1).svg" alt="star icon">
+        </li>
+        <li class="navbar__nav-item">
+          <a href="#latestArticles" class="navbar__nav-link">LATEST ARTICLES</a>
+         <img class="navbar__nav-icon" src="./img/download (1).svg" alt="star icon">
+        </li>
+        <li class="navbar__nav-item">
+          <a href="#authors" class="navbar__nav-link">AUTHORS</a>
+           <img class="navbar__nav-icon" src="./img/download (1).svg" alt="star icon">
+        </li>
+        <li class="navbar__nav-item">
+          <a href="#community" class="navbar__nav-link">COMMUNITY</a>
+        </li>
+      </ul>
+       <!-- right navbar  -->
+     <button type="button" class="navbar__cta">SUBSCRIBE NOW</button>
+    </nav>
+
+
+
+
+    <!-- mobile off-canvas navbar -->
+    <nav class="navbar__nav_mobile">
+      <div class="navbar-offcanvas">
+        <ul class="navbar__nav-list">
+           <hr class="line-style">
+        <div class="menu-exist">
+          <span class="menu-text exo-900">Menu</span> <label for="menu-toggle" class="close-btn">&times;</label>
+        </div>
+        <hr class="line-style">
+        <li class="navbar__nav-item">
+          <a href="#home" class="navbar__nav-link exo-700 m-t ">HOME</a>
+        
+        </li>
+        <li class="navbar__nav-item">
+          <a href="#latestArticles" class="navbar__nav-link exo-700">LATEST ARTICLES</a>
+          
+        </li>
+        <li class="navbar__nav-item">
+          <a href="#authors" class="navbar__nav-link exo-700">AUTHORS</a>
+        </li>
+        <li class="navbar__nav-item">
+          <a href="#community" class="navbar__nav-link exo-700">COMMUNITY</a>
+        </li>
+      </ul>
+       <!-- right navbar  -->
+        <div class="cta_container">
+         <button type="button" class="navbar__cta"><svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css">  .st0{fill:#000000;}  </style> <g> <path class="st0" d="M127.083,247.824l50.031-76.906c0,0-74.734-29.688-109.547-3.078C32.755,194.465,0.005,268.184,0.005,268.184 l37.109,21.516C37.114,289.699,84.083,198.684,127.083,247.824z"></path> <path class="st0" d="M264.177,384.918l76.906-50.031c0,0,29.688,74.734,3.078,109.547 c-26.625,34.797-100.344,67.563-100.344,67.563l-21.5-37.109C222.317,474.887,313.333,427.918,264.177,384.918z"></path> <path class="st0" d="M206.692,362.887l-13.203-13.188c-24,62.375-80.375,49.188-80.375,49.188s-13.188-56.375,49.188-80.375 l-13.188-13.188c-34.797-6-79.188,35.984-86.391,76.766c-7.188,40.781-8.391,75.563-8.391,75.563s34.781-1.188,75.578-8.391 S212.692,397.684,206.692,362.887z"></path> <path class="st0" d="M505.224,6.777C450.786-18.738,312.927,28.98,236.255,130.668c-58.422,77.453-89.688,129.641-89.688,129.641 l46.406,46.406l12.313,12.313l46.391,46.391c0,0,52.219-31.25,129.672-89.656C483.005,199.074,530.739,61.215,505.224,6.777z M274.63,237.371c-12.813-12.813-12.813-33.594,0-46.406s33.578-12.813,46.406,0.016c12.813,12.813,12.813,33.578,0,46.391 C308.208,250.184,287.442,250.184,274.63,237.371z M351.552,160.465c-16.563-16.578-16.563-43.422,0-59.984 c16.547-16.563,43.406-16.563,59.969,0s16.563,43.406,0,59.984C394.958,177.012,368.099,177.012,351.552,160.465z"></path> </g> </g></svg> SUBSCRIBE NOW</button>
+        </div>
+     
+      </div>
+    </nav>
+     
+   
+
+  </div>
+</header>
+
+
+<!-- HERO section -->
+<section class="hero" id="home">
+    <!-- Decorative background shapes -->
+  <div class="hero__decor decor-top-left"></div>
+  <div class="hero__decor decor-top-right"></div>
+  <div class="hero__decor decor-bottom-right"></div>
+
+  <div class="hero__container">
+
+    <!-- left column : hero content [headline+ paragrph + CTA] -->
+    <div class="hero__content">
+
+      <div class="badge">
+        <span class="badge-icon">🔥</span>
+        <span class="badge-text">TRENDING NOW</span>
+      </div>
+
+      <h2 class="hero__title">
+        <div class=" hero__title--black">BRUTAL</div>
+        <div class=" hero__title--red">THOUGHTS</div>
+        <div class=" hero__title--blue">BOLD IDEAS</div>
+      </h2>
+
+      <p class="hero__description">
+        Raw, unfiltered content about tech, design, and culture. No sugar-coating, just pure truth that hits different.
+      </p>
+
+      <div class="hero__actions">
+        <!-- 1st CTA -->
+        <button type="button" class="hero_btn hero_btn-primary">
+            <img class="hero__btn-icon icon-white" src="./img/rocket_icon.svg" alt=" rocket icon">
+             START READING</button>
+             <!-- 2nd CTA -->
+        <button type="button" class="hero_btn hero_btn-secondary">
+            <img class="hero__btn-icon" src="./img/download (17).svg" alt=" play video icon">
+            WATCH INTRO</button>
+       
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="hero__media">
+      <div class="hero__featured-badge">FEATURED</div>
+      <div class="hero__image-wrapper">
+        <img class="hero__image"
+          src="./img/imgi_1_e7c75b833c-f09fa794a4e1fbd04b1e.png"
+          alt="abstract brutalist geometric shapes with bold colors, digital art style, high contrast"
+        />
+      </div>
+      
+    </div>
+
+  </div>
+
+  
+</section>
+
+
+
+
+
+
+
+<!--  Latest Articles Section-->
+
+<section class="articles" id="latestArticles">
+  <div class="articles__container">
+
+    <!-- LEFT COLUMN: Article List -->
+    <div class="articles__main">
+
+      <div class="articles__header">
+        <h2 class="articles__title exo-900">LATEST ARTICLES</h2>
+
+        <div class="badge">
+        <span class="badge-text exo-700"> 🔥FRESH CONTENT</span>
+      </div>
+
+      </div>
+
+      <!-- Article Card 1 -->
+      <article class="article__card">
+        <div class="article__card-container">
+           
+         <div class="article-card__media">
+            <span class=" article_tag article_tag-new exo-700">NEW</span>
+          <img src="./img/imgi_2_user-engagement-2-DFdiyblT.jpg" alt="Why Your Website Needs More Edge" class="article-card__img" />
+        </div>
+        <div class="article-card__body">
+          <span class=" article_tag article_tag-tech exo-700">TECH</span>
+          <h3 class="article-card__title exo-700">Why Your Website Needs More Edge</h3>
+          <p class="article-card__desc exo-400">
+            Exploring the psychological impact of bold, unapologetic design choices on user engagement and brand perception in the digital age.
+          </p>
+          <div class="article-card__meta">
+           <div class="first_column">
+             <!-- author name -->
+            <span class="article-card__author exo-600">
+              <img class="article-card__icons" src="./img/person(15).svg" alt="Author icon"  />
+            BY ALEX BRUTAL
+            </span>
+            <!-- article date  -->
+            <span class="article-card__date exo-600">
+                <img class="article-card__icons" src="./img/date (14).svg" alt="Calender icon">
+             JAN 8,2025
+
+            </span>
+           </div>
+           <div class="sec_column">
+
+             <!-- article time -->
+            <span class="article-card__read-time exo-600">
+                 <img class="article-card__icons" src="./img/time (8).svg" alt="Clock icon">
+                 5 MIN READ
+
+            </span>
+
+            <!-- article react -->
+            <span class="article-card__reacts exo-600">
+                 <img class="article-card__icons icon-love" src="./img/love (7).svg" alt="heart icon">
+                 127
+
+            </span>
+           </div>
+
+
+           
+          </div>
+        </div>
+        </div>
+       
+      </article>
+
+      <!-- Article Card 2 -->
+         <article class="article__card">
+        <div class="article__card-container">
+           
+         <div class="article-card__media">
+            <span class=" article_tag article_tag-hot  exo-700">HOT</span>
+          <img src="./img/imgi_3_guide-to-typography-CNuK3VDW.webp" alt="Typography that screams" class="article-card__img" />
+        </div>
+        <div class="article-card__body">
+          <span class=" article_tag article_tag-design exo-700">DESIGN</span>
+          <h3 class="article-card__title exo-700">Typography That Screams</h3>
+          <p class="article-card__desc exo-400">
+           How to choose and implement bold typography that commands attention without sacrificing readability or user experience.
+          </p>
+          <div class="article-card__meta">
+            <div class="first_column">
+                 <!-- author name -->
+            <span class="article-card__author exo-600">
+              <img class="article-card__icons" src="./img/person(15).svg" alt="Author icon"  />
+              BY ARNOLD REEVE
+            </span>
+            <!-- article date  -->
+            <span class="article-card__date exo-600">
+                <img class="article-card__icons" src="./img/date (14).svg" alt="Calender icon">
+             JAN 6,2025
+
+            </span>
+            </div>
+            <div class="sec_column">
+                <!-- article time -->
+            <span class="article-card__read-time exo-600">
+                 <img class="article-card__icons" src="./img/time (8).svg" alt="Clock icon">
+                7 MIN READ
+
+            </span>
+            <!-- article react -->
+            <span class="article-card__reacts exo-600">
+                 <img class="article-card__icons icon-love" src="./img/love (7).svg" alt="heart icon">
+                 89
+
+            </span>
+            </div>
+          </div>
+        </div>
+        </div>
+       
+      </article>
+      
+      <!-- Article Card 3 -->
+      <article class="article__card">
+        <div class="article__card-container">
+           
+         <div class="article-card__media">
+            <span class=" article_tag article_tag-viral  exo-700">VIRAL</span>
+          <img src="./img/imgi_4_anti-instagram-Bn9b8TEi.jpg" alt="The Anti-Instagram Movement" class="article-card__img" />
+        </div>
+        <div class="article-card__body">
+          <span class=" article_tag article_tag-culture exo-700">CULTURE</span>
+          <h3 class="article-card__title exo-700">The Anti-Instagram Movement</h3>
+          <p class="article-card__desc exo-400">
+          Young creators are abandoning polished feeds for raw, authentic content that celebrates imperfection and real human connection.
+          </p>
+          <div class="article-card__meta">
+           <div class="first_column">
+             <!-- author name -->
+            <span class="article-card__author exo-600">
+              <img class="article-card__icons" src="./img/person(15).svg" alt="Author icon"  />
+              BY MIKE EDGE
+            </span>
+            <!-- article date  -->
+            <span class="article-card__date exo-600">
+                <img class="article-card__icons" src="./img/date (14).svg" alt="Calender icon">
+             JAN 4,2025
+
+            </span>
+           </div>
+           <div class="sec_column">
+             <!-- article time -->
+            <span class="article-card__read-time exo-600">
+                 <img class="article-card__icons" src="./img/time (8).svg" alt="Clock icon">
+                 4 MIN READ
+
+            </span>
+            <!-- article reacr -->
+            <span class="article-card__reacts exo-600">
+                 <img class="article-card__icons icon-love" src="./img/love (7).svg" alt="heart icon">
+                 203
+
+            </span>
+           </div>
+          </div>
+        </div>
+        </div>
+       
+      </article>
+
+      <div class="articles__load-more">
+        <button class="articles__load-btn exo-700"><img src="./img/more (13).svg" alt=" plus icon"> LOAD MORE ARTICLES</button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Sidebar -->
+    <div class="articles__sidebar">
+
+      <!-- Trending Now -->
+      <div class="trending">
+        <h3 class="trending__title exo-900">TRENDING NOW</h3>
+        <ol class="trending__list">
+          <li class="trending__item">
+            <span class="trending__number exo-900 text-red ">01</span>
+            <div class="trending__content">
+              <h4 class="trending__article-title hover-red exo-700">The Death of Minimalism</h4>
+              <span class="trending__article-meta exo-400"> 12.5K reads • 🔥 Trending</span>
+            </div>
+          </li>
+          <li class="trending__item">
+            <span class="trending__number exo-900 text-blue">02</span>
+            <div class="trending__content">
+              <h4 class="trending__article-title hover-blue exo-700">Chaos in a Design System</h4>
+              <p class="trending__article-meta exo-400">8.2K reads • ⚡ Rising</p>
+            </div>
+          </li>
+          <li class="trending__item">
+            <span class="trending__number exo-900 text-purple">03</span>
+            <div class="trending__content">
+              <h4 class="trending__article-title hover-purple exo-700">Digital Rebellion</h4>
+              <p class="trending__article-meta exo-400">6.7K reads • 💥 Hot</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Categories -->
+      <div class="categories">
+        <h4 class="categories__title exo-900">CATEGORIES</h4>
+        <ul class="categories__list">
+          <li class="categories__item item-tech exo-700">
+          TECH (24)
+          </li>
+          <li class="categories__item item-design exo-700">
+            DESIGN (36)
+          </li>
+          <li class="categories__item item-culture exo-700">
+            CULTURE (18)
+          </li>
+          <li class="categories__item item-opinion exo-700">
+           OPINION (52)
+          </li>
+          <li class="categories__item item-tutorial exo-700">
+            TUTORIALS (9)
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- meet the author section-->
+
+<section class="authors" id="authors">
+  <div class="authors__decor decor-bottom-left"></div>
+  <div class="authors__decor decor-top-right"></div>
+
+  <div class="authors__container">
+
+    <div class="authors__header">
+      <h2 class="authors__title exo-900">MEET THE AUTHORS</h2>
+      <p class="authors__desc exo-600">The rebels behind the brutal truth</p>
+      <div class="authors__line"></div>
+    </div>
+
+    <div class="authors__flex">
+
+      <!-- Author Card 1 -->
+      <div class="author-card yellow-card">
+        <div class="author-card__badge badge-founder exo-700">FOUNDER</div>
+        <div class="author-card__container">
+           <img src="./img/alex_brutal_photo.jpg" alt="Alex Brutal" class="author-card__avatar" />
+        <h3 class="author-card__name exo-900">ALEX BRUTAL</h3>
+        <p class="author-card__role exo-700">Tech Critic & Design Rebel</p>
+        <p class="author-card__bio exo-400">
+         Destroying conventional wisdom one article at a time. 10+ years fighting the good fight against boring design and corporate BS.
+        </p>
+        <div class="author-card__socials">
+          <a href="#" class="social-link twitter"><img class="social-logo" src="./img/twitter_logo.svg" alt="twitter logo"></a>
+           <a href="#" class="social-link linkedin"><img class="social-logo" src="./img/linkedin_logo.svg" alt="linkedin logo"></a>
+            <a href="#" class="social-link instagram"><img class="social-logo" src="./img/instgram_logo.svg" alt="instgram logo"></a>
+        
+        </div>
+        </div>
+         
+      </div>
+
+      <!-- Author Card 2 -->
+      <div class="author-card blue-card">
+        <div class="author-card__badge badge-lead exo-700">LEAD</div>
+        <div class="author-card__container">
+           <img src="./img/arnold_reeve_photo.jpg" alt="Arnold Reeve" class="author-card__avatar" />
+        <h3 class="author-card__name exo-900">Arnold Reeve</h3>
+        <p class="author-card__role exo-700">UX Anarchist & Visual Provocateur</p>
+        <p class="author-card__bio exo-400">
+        Challenging design norms and creating chaos that actually works. Former corporate designer turned rebel with a cause.
+        </p>
+        <div class="author-card__socials">
+          <a href="#" class="social-link twitter"><img class="social-logo" src="./img/twitter_logo.svg" alt="twitter logo"></a>
+           <a href="#" class="social-link linkedin"><img class="social-logo" src="./img/linkedin_logo.svg" alt="linkedin logo"></a>
+            <a href="#" class="social-link instagram"><img class="social-logo" src="./img/instgram_logo.svg" alt="instgram logo"></a>
+        
+        </div>
+        </div>
+      </div>
+
+      <!-- Author Card 3 -->
+      <div class="author-card purple-card">
+         <div class="author-card__badge badge-viral exo-700">VIRAL</div>
+        <div class="author-card__container">
+           <img src="./img/mike_edge_photo.jpg" alt="MIKE EDGE" class="author-card__avatar" />
+        <h3 class="author-card__name exo-900">MIKE EDGE</h3>
+        <p class="author-card__role exo-700">Cultural Critic & Trend Destroyer</p>
+        <p class="author-card__bio exo-400">
+         Dissecting digital culture and exposing the truth behind viral trends. No filter, just facts that cut through the noise.
+        </p>
+        <div class="author-card__socials">
+          <a href="#" class="social-link twitter"><img class="social-logo" src="./img/twitter_logo.svg" alt="twitter logo"></a>
+           <a href="#" class="social-link linkedin"><img class="social-logo" src="./img/linkedin_logo.svg" alt="linkedin logo"></a>
+            <a href="#" class="social-link instagram"><img class="social-logo" src="./img/instgram_logo.svg" alt="instgram logo"></a>
+        
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- join the rebellion section-->
+<section class="rebellion" id="community">
+  <div class="rebellion__container">
+
+    <div class="rebellion__header">
+      <h2 class="rebellion__title exo-900">JOIN THE REBELLION</h2>
+      <p class="rebellion__desc exo-600">Where rebels gather to change the digital world</p>
+      <div class="rebellion__line"></div>
+    </div>
+
+    <div class="rebellion__flex">
+
+      <!-- LEFT: Become Part of Something -->
+      <div class="rebellion__join">
+        <h3 class="rebellion__join-title exo-900">BECOME PART OF SOMETHING BIGGER</h3>
+        <div class="rebellion-desc-card">
+          <p class="rebellion__join-desc exo-600">
+          Join thousands of designers, developers, and digital rebels who are tired of the same old boring content. Our community is where raw ideas meet bold execution and real change happens.
+        </p>
+        </div>
+        <ul class="rebellion__list">
+            <!-- 1st item -->
+          <li class="rebellion__item">
+           <div class="icon-card icon-red">
+             <img class=" rebellion__item-icon  " src="./img/correct_icon.svg" alt="correct icon">
+           </div>
+            <span class="rebellion__item_desc exo-600">   Weekly brutal insights newsletter with exclusive content</span>
+          </li>
+          <!-- 2nd item -->
+          <li class="rebellion__item">
+         <div class="icon-card icon-blue">
+          <img class=" rebellion__item-icon  " src="./img/discord_logo.svg" alt="discord logo ">
+         </div>
+          <span class="rebellion__item_desc exo-600">  Exclusive community Discord access for real-time discussions</span>
+          </li>
+          <!-- 3rd item -->
+          <li class="rebellion__item">
+           <div class="icon-card icon-purple">
+            <img class=" rebellion__item-icon " src="./img/star_icon.svg" alt="star icon">
+           </div>
+            <span class="rebellion__item_desc exo-600">Early access to new articles before they go public</span>
+          </li>
+          <!-- 4th item -->
+          <li class="rebellion__item">
+         <div class="icon-card icon-green">
+             <img class=" rebellion__item-icon  " src="./img/pen_icon.svg" alt="pen icon">
+         </div>
+            <span class="rebellion__item_desc exo-600">Submit your own brutal takes and get featured</span>
+          </li>
+        </ul>
+
+        <div class="btn-container">
+          <button  class="rebellion__cta-btn exo-700" type="button"> <img class="rock_icon" src="./img/rocket_icon.svg" alt="rocket icon ">JOIN NOW - IT'S FREE</button>
+        </div>
+        
+      </div>
+
+      <!-- RIGHT: Testimonials -->
+      <div class="rebellion__testimonials">
+        <h3 class="rebellion__testimonials-title exo-900">WHAT REBELS ARE SAYING</h3>
+        
+        <!-- 1st testimoinal -->
+        <div class="testimonial red-background">
+          <blockquote class="testimonial__quote exo-600">
+            "Finally, a blog that tells it like it is. No corporate BS, just pure truth about what's really happening in tech. This is the wake-up call our industry needed."
+          </blockquote>
+          <div class="testimonial__author">
+            <img src="./img/mark_photo.avif" alt="Mark T. photo" class="testimonial__avatar" />
+            <div class="testimonial__info">
+              <span class="testimonial__name exo-700">Mark T.</span>
+              <div class="testimonial__title exo-400">Senior Designer at Meta</div>
+            </div>
+          </div>
+        </div>
+          
+        <!-- 2nd testimoinal  -->
+        <div class="testimonial blue-background">
+          <blockquote class="testimonial__quote exo-600">
+            "The UX Review changed how I think about design. It's raw, honest, and exactly what our industry needs. Every article challenges my assumptions."
+          </blockquote>
+          <div class="testimonial__author">
+            <img src="./img/alex_photo.jpg" alt="Alex M. photo" class="testimonial__avatar" />
+            <div class="testimonial__info">
+              <span class="testimonial__name exo-700">Alex M.</span>
+              <div class="testimonial__title exo-400">Lead Developer at Stripe</div>
+            </div>
+          </div>
+        </div>
+          
+        <!-- 3rd testimoinal -->
+        <div class="testimonial purple-background">
+          <blockquote class="testimonial__quote exo-600">
+            "The most authentic voice in digital culture. Every article challenges my assumptions and makes me think differently about the work I do."
+          </blockquote>
+          <div class="testimonial__author">
+            <img src="./img/james_photo.webp" alt="James H." class="testimonial__avatar" />
+            <div class="testimonial__info">
+              <span class="testimonial__name exo-700">James H.</span>
+              <div class="testimonial__title exo-400">Creative Director at Adobe</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer__container">
+    
+    <div class="footer__section footer__section--brand">
+      <div class="footer__logo-container">
+        <div class="footer__logo-icon">
+          
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="26"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#000000" d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z"/></svg>
+         
+        </div>
+        <h2 class="footer__brand-title">THE UX REVIEW</h2>
+      </div>
+      <p class="footer__brand-text">
+        Raw, unfiltered thoughts on tech, design, and digital culture. No compromise, no corporate speak, just brutal truth that matters.
+      </p>
+    </div>
+
+    <div class="footer__section footer__section--categories">
+      <h3 class="footer__heading">CATEGORIES</h3>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" class="footer__link exo-600">TECH</a></li>
+        <li class="footer__item"><a href="#" class="footer__link exo-600">DESIGN</a></li>
+        <li class="footer__item"><a href="#" class="footer__link exo-600">CULTURE</a></li>
+        <li class="footer__item"><a href="#" class="footer__link exo-600">OPINION</a></li>
+        <li class="footer__item"><a href="#" class="footer__link exo-600">TUTORIALS</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__section footer__section--newsletter">
+      <h3 class="footer__heading">NEWSLETTER</h3>
+      <p class="footer__newsletter-text">
+        Get brutal insights delivered weekly. No spam, just truth that cuts through the noise.
+      </p>
+      <form class="footer__form">
+        <input type="email" class="footer__input" placeholder="YOUR EMAIL ADDRESS" required />
+        <button type="submit" class="footer__button exo-700">SUBSCRIBE</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__bottom-container">
+      <p class="footer__copyright exo-600">
+        &copy; 2025 The UX Review. ALL RIGHTS RESERVED. STAY BRUTAL.
+      </p>
+      <div class="footer__legal-links exo-600">
+        <a href="#" class="footer__legal-link">PRIVACY POLICY</a>
+        <a href="#" class="footer__legal-link">TERMS OF USE</a>
+        <a href="#" class="footer__legal-link">COOKIE POLICY</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
