@@ -4,9 +4,7 @@ A responsive clone of the UX Review Blog landing page built using HTML5 and CSS3
 
 This project focuses on modern frontend development practices including Flexbox layouts, responsive design, semantic HTML, BEM naming conventions, and a CSS-only mobile navigation menu.
 
-## Preview
 
-![Project Preview](img/project-preview.png)
 
 ## Live Demo
 
